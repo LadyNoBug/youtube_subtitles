@@ -29,7 +29,9 @@ class SubtitleViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         # serializer = self.get_serializer(data=request.data)
         # serializer.is_valid(raise_exception=True)
-        youtube_url = request.POST.get('youtube_url')
+        # youtube_url = request.POST.get('youtube_url')
+        youtube_url = 'https://www.youtube.com/watch?v=ad9St_ryyBo'
+        print(youtube_url)
         video_id, subtitles = self.get_subtitles(youtube_url)
 
         ### Error Handling
